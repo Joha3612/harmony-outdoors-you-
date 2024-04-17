@@ -1,153 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Harmony Outdoors</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmony Outdoors</title>
+    <style>
+        /* CSS Styles */
+        body {
+            background: linear-gradient(to bottom right, #8cc63f, #009975);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .product {
+            width: 300px;
+            margin: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* JavaScript */
+        function submitForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            // Perform any necessary validation here
+
+            // Display thank you message
+            document.getElementById("contact-form").innerHTML = "<p>Thank you for contacting Harmony Outdoors, " + name + "!</p>";
+        }
+    </style>
 </head>
-
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#about">About Us</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About Us</a>
+        </nav>
+    </header>
 
-  <main>
-    <section id="home">
-      <h1>Welcome to Harmony Outdoors</h1>
-      <p>Experience nature with our high-quality camping gear.</p>
-    </section>
+    <main>
+        <div class="product">
+            <img src="product1.jpg" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>Weight: 2kg</p>
+            <p>Capacity: 4 persons</p>
+            <p>Material: Nylon</p>
+        </div>
 
-    <section id="products">
-      <h2>Our Products</h2>
-      <div class="product">
-        <img src="camping-gear1.jpg" alt="Camping Gear 1">
-        <h3>Product 1</h3>
-        <p><strong>Weight:</strong> 5 lbs</p>
-        <p><strong>Capacity:</strong> 2 people</p>
-        <p><strong>Material:</strong> Nylon</p>
-      </div>
+        <div class="product">
+            <img src="product2.jpg" alt="Product 2">
+            <h3>Product 2</h3>
+            <p>Weight: 1.5kg</p>
+            <p>Capacity: 2 persons</p>
+            <p>Material: Polyester</p>
+        </div>
 
-      <div class="product">
-        <img src="camping-gear2.jpg" alt="Camping Gear 2">
-        <h3>Product 2</h3>
-        <p><strong>Weight:</strong> 4 lbs</p>
-        <p><strong>Capacity:</strong> 4 people</p>
-        <p><strong>Material:</strong> Polyester</p>
-      </div>
+        <div class="product">
+            <img src="product3.jpg" alt="Product 3">
+            <h3>Product 3</h3>
+            <p>Weight: 3kg</p>
+            <p>Capacity: 6 persons</p>
+            <p>Material: Canvas</p>
+        </div>
+    </main>
 
-      <div class="product">
-        <img src="camping-gear3.jpg" alt="Camping Gear 3">
-        <h3>Product 3</h3>
-        <p><strong>Weight:</strong> 3 lbs</p>
-        <p><strong>Capacity:</strong> 1 person</p>
-        <p><strong>Material:</strong> Canvas</p>
-      </div>
-    </section>
+    <footer>
+        &copy; 2024 Harmony Outdoors. All rights reserved.
+        <a href="#"><img src="facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="instagram.png" alt="Instagram"></a>
+    </footer>
 
-    <section id="about">
-      <h2>About Us</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec porta dui. Pellentesque in ligula
-        hendrerit, bibendum quam a, suscipit est. Nunc sollicitudin lacus eget mauris ultrices, non consectetur ex
-        ornare.</p>
-      <form id="contact-form" action="#">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-        <button type="submit">Submit</button>
-      </form>
-      <div id="thank-you-message"></div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2024 Harmony Outdoors. All rights reserved.</p>
-    <div class="social-media-icons">
-      <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-      <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
-      <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    <script>
+        // JavaScript code can be placed here or in a separate .js file
+    </script>
 </body>
-
 </html>
-/* styles.css */
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-}
-
-header {
-  background-color: #f2f2f2;
-  padding: 10px;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin-right: 10px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #333;
-}
-
-main {
-  padding: 20px;
-}
-
-section {
-  margin-bottom: 30px;
-}
-
-h1, h2, h3 {
-  color: #333;
-}
-
-.product {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-.product img {
-  width: 200px;
-  height: auto;
-}
-
-footer {
-  background-color: #f2f2f2;
-  padding: 10px;
-  text-align: center;
-}
-
-.social-media-icons img {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
-}
-// script.js
-
-document.getElementById("contact-form").addEventListener("submit", function (event) {
-  event.preventDefault();
-  document.getElementById("thank-you-message").textContent = "Thank you for contacting Harmony Outdoors!";
-});
